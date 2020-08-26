@@ -1,6 +1,5 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,7 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const { previous, next, raw } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -37,6 +36,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
+        <h1>!!!{raw}</h1>
+        <xmp> {JSON.stringify(data)}</xmp>
+
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

@@ -1,6 +1,20 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+// query site {
+//   allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
+//     edges {
+
+//       node {
+
+//         internal {
+//           content
+//         }
+//       }
+//     }
+//   }
+// }
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -19,6 +33,9 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+              }
+              internal {
+                content
               }
             }
           }
@@ -45,6 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+        raw: post.node.internal.content,
       },
     })
   })
