@@ -1,8 +1,14 @@
 ---
-title: Hello World
+title: Hello World Joost
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 ---
+
+<Hallo/>
+
+Here's an example of a DatePicker pre-set to only the month of December:
+
+<Hallo />
 
 This is my first post on my new fake blog! How exciting!
 

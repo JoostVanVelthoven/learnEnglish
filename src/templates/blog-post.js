@@ -1,8 +1,10 @@
 import { graphql, Link } from "gatsby"
+import Markdown from "markdown-to-jsx"
 import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { CompleteText } from "../game/components/completeText"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -36,10 +38,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <h1>!!!{raw}</h1>
-        <xmp> {JSON.stringify(data)}</xmp>
 
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Markdown
+          children={raw}
+          options={{
+            overrides: {
+              CompleteText,
+            },
+          }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),
