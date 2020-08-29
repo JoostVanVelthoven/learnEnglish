@@ -5,10 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-
+import React from "react"
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
@@ -59,8 +58,8 @@ const Bio = () => {
       <p>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        <a href="https://www.instagram.com/anyasecret/">
+          You can follow her on Instagram
         </a>
       </p>
     </div>
