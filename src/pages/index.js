@@ -1,6 +1,5 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,6 +13,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+      {JSON.stringify(process)}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

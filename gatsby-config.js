@@ -10,6 +10,7 @@ module.exports = {
     social: {
       twitter: `kylemathews`,
     },
+    plugins: [`gatsby-plugin-feed`],
   },
   plugins: [
     {
