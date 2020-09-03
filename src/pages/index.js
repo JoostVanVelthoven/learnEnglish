@@ -8,12 +8,14 @@ import { rhythm } from "../utils/typography"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const activeEnv =
+    process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      {JSON.stringify(process)}
+      {activeEnv}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
