@@ -6,13 +6,11 @@ module.exports = {
       summary: `who lives and works in Amsterdam teaching useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
-    plugins: [`gatsby-plugin-feed`],
+    siteUrl: `https://www.englishproficiency.ru/`,
+    social: { twitter: `.` },
   },
   plugins: [
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
