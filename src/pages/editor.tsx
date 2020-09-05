@@ -22,7 +22,7 @@ const EditorIndex = ({}) => {
             value={input}
             style={{ flex: "1" }}
           ></textarea>
-          <div style={{ flex: "1" }}>
+          <div style={{ flex: "1", margin: "2rem" }}>
             <GameMarkdown raw={input} />
           </div>
         </div>
