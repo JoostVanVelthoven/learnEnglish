@@ -12,17 +12,19 @@ const EditorIndex = ({}) => {
 
   return (
     <AppProvider>
-      <div style={{ width: "100vw", height: "100vh", display: "flex" }}>
-        <textarea
-          onChange={a => {
-            localStorage.setItem("editor", a.target.value)
-            setInput(a.target.value)
-          }}
-          value={input}
-          style={{ flex: "1" }}
-        ></textarea>
-        <div style={{ flex: "1" }}>
-          <GameMarkdown raw={input} />
+      <div>
+        <div style={{ width: "100vw", height: "100vh", display: "flex" }}>
+          <textarea
+            onChange={a => {
+              localStorage.setItem("editor", a.target.value)
+              setInput(a.target.value)
+            }}
+            value={input}
+            style={{ flex: "1" }}
+          ></textarea>
+          <div style={{ flex: "1" }}>
+            <GameMarkdown raw={input} />
+          </div>
         </div>
       </div>
     </AppProvider>
