@@ -1,14 +1,12 @@
 import { graphql, Link } from "gatsby"
-import Markdown from "markdown-to-jsx"
 import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { AppProvider } from "../context/languageContext"
-import { CompleteText } from "../game/components/completeText"
+import GameMarkdown from "../game/components/gameMarkdown"
 import { ProgressBar } from "../game/components/progressBar"
 import { rhythm, scale } from "../utils/typography"
-
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -43,14 +41,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </p>
           </header>
 
-          <Markdown
-            children={raw}
-            options={{
-              overrides: {
-                CompleteText,
-              },
-            }}
-          />
+          <GameMarkdown raw={raw} />
           <hr
             style={{
               marginBottom: rhythm(1),
