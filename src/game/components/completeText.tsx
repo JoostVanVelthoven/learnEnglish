@@ -55,7 +55,7 @@ export const CompleteText = ({
       }}
       type="text"
       placeholder={placeholder}
-      onChange={onUpdate}
+      onBlur={onUpdate}
     />
   )
 }

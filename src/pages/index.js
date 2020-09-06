@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
         popoverItems={itemClass => (
           <>
             <span className={itemClass} onClick={() => alert("sharing")}>
-              Play sound
+              Play sound |
             </span>
           </>
         )}

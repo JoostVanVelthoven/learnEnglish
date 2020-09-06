@@ -15,6 +15,7 @@ export const T = ({
       className="extraInfo"
       title={translate}
       style={{ backgroundColor: "rgba(12, 242, 143, 0.2)", padding: "0.1rem" }}
+      onClick={a => alert(translate)}
     >
       {children}
     </span>
