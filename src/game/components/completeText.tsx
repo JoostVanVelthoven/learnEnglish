@@ -60,7 +60,7 @@ export const CompleteText = ({
       type="text"
       placeholder={placeholder}
       onBlur={onUpdateBlur}
-      onCanPlay={onUpdateChange}
+      onChange={onUpdateChange}
     />
   )
 }
