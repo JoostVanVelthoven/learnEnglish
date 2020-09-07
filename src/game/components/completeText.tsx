@@ -55,6 +55,7 @@ export const CompleteText = ({
         padding: "3px",
         width: `${Math.max(answer.length, placeholder.length) * 15}px`,
         lineHeight: "1rem",
+        maxWidth: "100%",
       }}
       type="text"
       placeholder={placeholder}
