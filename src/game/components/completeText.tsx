@@ -28,14 +28,16 @@ export const CompleteText = ({
 
   const validResult = isValid(input, answer)
 
-  const onUpdate = useCallback(
+  const onUpdateChange = useCallback(
     e => {
-      dispatch({
-        type: actions.setChallengeResult,
-        id,
-        isValid: isValid(e.target.value.trim(), answer),
-      })
-      setInput(e.target.value.trim())
+      update(dispatch, id, e, answer, setInput, true)
+    },
+    [id, isValid]
+  )
+
+  const onUpdateBlur = useCallback(
+    e => {
+      update(dispatch, id, e, answer, setInput, false)
     },
     [id, isValid]
   )
@@ -51,11 +53,32 @@ export const CompleteText = ({
             ? "4px solid darkgreen"
             : "4px solid darkred",
         padding: "3px",
-        width: `${answer.length * 15}px`,
+        width: `${Math.max(answer.length, placeholder.length) * 15}px`,
+        lineHeight: "1rem",
       }}
       type="text"
       placeholder={placeholder}
-      onBlur={onUpdate}
+      onBlur={onUpdateBlur}
+      onCanPlay={onUpdateChange}
     />
   )
+}
+
+function update(
+  dispatch: any,
+  id: string,
+  e: any,
+  answer: string,
+  setInput: React.Dispatch<React.SetStateAction<string>>,
+  onlyWhenValid: boolean
+) {
+  const valid = isValid(e.target.value.trim(), answer)
+  if (!onlyWhenValid || valid) {
+    dispatch({
+      type: actions.setChallengeResult,
+      id,
+      isValid: valid,
+    })
+  }
+  setInput(e.target.value.trim())
 }

@@ -1,6 +1,5 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
-import HighlightPop from "react-highlight-pop"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,18 +13,6 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      <HighlightPop
-        popoverItems={itemClass => (
-          <>
-            <span className={itemClass} onClick={() => alert("sharing")}>
-              Play sound |
-            </span>
-          </>
-        )}
-      >
-        <p>You can highlight me</p>
-        <p>I will show a popover when you highlight me</p>
-      </HighlightPop>
 
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
