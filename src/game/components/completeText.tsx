@@ -50,7 +50,7 @@ export const CompleteText = ({
           validResult == null
             ? "4px solid #999"
             : validResult
-            ? "4px solid darkgreen"
+            ? "4px solid lightgreen"
             : "4px solid darkred",
         padding: "3px",
         width: `${Math.max(answer.length, placeholder.length) * 15}px`,
