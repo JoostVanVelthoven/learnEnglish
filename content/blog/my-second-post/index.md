@@ -11,3 +11,7 @@ egg yolk will be less rich."?
 ([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
 
 <T translate="CCCC">Yeah</T>, I didn't either.
+
+<Speech speak="What Are you going to do today?" />
+
+<More extraText="This is a extra text"><Speech speak="Anya, do you think this is a usefull feature?"  /> this is a text</More>

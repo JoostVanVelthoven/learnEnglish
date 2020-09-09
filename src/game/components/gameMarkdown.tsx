@@ -1,6 +1,8 @@
 import Markdown from "markdown-to-jsx"
 import React from "react"
 import { CompleteText } from "./completeText"
+import { More } from "./more"
+import { Speech } from "./speech"
 import { T } from "./text"
 const GameMarkdown = ({ raw }: { raw: string }) => (
   <Markdown
@@ -10,6 +12,8 @@ const GameMarkdown = ({ raw }: { raw: string }) => (
       overrides: {
         CompleteText,
         T,
+        Speech,
+        More,
       },
     }}
   />
