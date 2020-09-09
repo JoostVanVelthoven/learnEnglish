@@ -16,7 +16,7 @@ export const More = ({
         style={{
           cursor: "pointer",
           borderRadius: "50px",
-          backgroundColor: "lightBlue",
+          backgroundColor: "yellowgreen",
           padding: "0.2rem",
           width: "25px",
           display: "inline-block",

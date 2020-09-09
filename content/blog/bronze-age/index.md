@@ -12,7 +12,7 @@ The <T translate="Уровень детализации">level of detail</t> <T 
 The <T translate="Исследователи">researchers</t> <T translate="учитывали">considered</t> not only the color of the <T translate="меха">fur</t> but also <T translate="формы тела">body shapes</t> and<T translate="положения хвоста">tail positions</t> of the animals <T translate="анализируя"> by analyzing</t> the <T translate="изображения">paintings</t>.
 They also found out that some of the monkeys were <T translate="бабуинами">baboons</t>.
 The <T translate="Другие">other ones</t> were <T translate="лангурами">langurs</t> - primates native to the Indian <T translate="субконтинента">subcontinent</t>.
-These <T translate="открытия">findings</t> <T translate="означают">mean</t> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</t> the <T translate="расстояние">distance<t> between two countries is more than 4 <T translate="тысяч">thousand</t> kilometers.
+These <T translate="открытия">findings</t> <T translate="означают">mean</t> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</t> the <T translate="расстояние">distance</T> between two countries is more than 4 <T translate="тысяч">thousand</t> kilometers.
 
 <hr/>
 In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"/>

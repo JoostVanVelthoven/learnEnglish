@@ -49,6 +49,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
           <footer>
             <Bio />
+            <div
+              style={{
+                backgroundColor: "antiquewhite",
+                borderRadius: "1rem",
+                padding: "1rem",
+                textAlign: "center",
+                margin: "1rem 0 1rem 0",
+              }}
+            >
+              <form>
+                <h4
+                  style={{
+                    margin: "0.1rem 0.1rem 1rem 0.1rem",
+                    textAlign: "center",
+                  }}
+                >
+                  Sign up for the newsletter
+                </h4>
+                <input type="email" required /> <button>Aanmelden</button>
+              </form>
+            </div>
           </footer>
         </article>
 
