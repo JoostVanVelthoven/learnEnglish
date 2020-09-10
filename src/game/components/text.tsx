@@ -1,7 +1,5 @@
 import React from "react"
-
-const isValid = (input: string, answer: string) =>
-  input.length === 0 ? null : input?.toLowerCase() === answer?.toLowerCase()
+import { Speech } from "./speech"
 
 export const T = ({
   translate,
@@ -11,13 +9,19 @@ export const T = ({
   children: any
 }) => {
   return (
-    <span
-      className="extraInfo"
-      title={translate}
-      style={{ backgroundColor: "rgba(12, 242, 143, 0.2)", padding: "0.1rem" }}
-      onClick={a => alert(translate)}
-    >
-      {children}
-    </span>
+    <>
+      <Speech speak={children} />
+      <span
+        className="extraInfo"
+        title={translate}
+        style={{
+          backgroundColor: "rgba(12, 242, 143, 0.2)",
+          padding: "0.1rem",
+        }}
+        onClick={a => alert(translate)}
+      >
+        {children}
+      </span>
+    </>
   )
 }

@@ -49,6 +49,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
           <footer>
             <Bio />
+            <hr />
             <div
               style={{
                 backgroundColor: "antiquewhite",
