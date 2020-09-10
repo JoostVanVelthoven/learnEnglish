@@ -26,20 +26,19 @@ export const CompleteText = ({
     })
   }, [])
 
-  const validResult = isValid(input, answer)
-
+  const [validResult, setValidResult] = useState<boolean | undefined>(undefined)
   const onUpdateChange = useCallback(
     e => {
-      update(dispatch, id, e, answer, setInput, true)
+      update(dispatch, id, e, answer, setInput, true, setValidResult)
     },
-    [id, isValid]
+    [id, isValid, setValidResult]
   )
 
   const onUpdateBlur = useCallback(
     e => {
-      update(dispatch, id, e, answer, setInput, false)
+      update(dispatch, id, e, answer, setInput, false, setValidResult)
     },
-    [id, isValid]
+    [id, isValid, setValidResult]
   )
 
   return (
@@ -57,6 +56,7 @@ export const CompleteText = ({
         lineHeight: "1rem",
         maxWidth: "100%",
       }}
+      aria-label={"перевести: " + placeholder}
       type="text"
       placeholder={placeholder}
       onBlur={onUpdateBlur}
@@ -71,15 +71,19 @@ function update(
   e: any,
   answer: string,
   setInput: React.Dispatch<React.SetStateAction<string>>,
-  onlyWhenValid: boolean
+  onlyWhenValid: boolean,
+  setValidResult: React.Dispatch<React.SetStateAction<boolean>>
 ) {
+  setInput(e.target.value.trim())
+
   const valid = isValid(e.target.value.trim(), answer)
+
   if (!onlyWhenValid || valid) {
     dispatch({
       type: actions.setChallengeResult,
       id,
       isValid: valid,
     })
+    setValidResult(valid)
   }
-  setInput(e.target.value.trim())
 }
