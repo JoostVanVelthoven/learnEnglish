@@ -1,6 +1,6 @@
 import React from "react"
 
-const SignUp = (
+const SignUp = () => (
   <div
     style={{
       backgroundColor: "antiquewhite",

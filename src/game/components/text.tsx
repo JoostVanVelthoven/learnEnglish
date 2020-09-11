@@ -8,9 +8,10 @@ export const T = ({
   translate: string
   children: any
 }) => {
+  const text = children?.filter(a => typeof a === "string")?.join(" ")
   return (
     <>
-      <Speech speak={children} />
+      {text && <Speech speak={text} />}
       <span
         className="extraInfo"
         title={translate}
