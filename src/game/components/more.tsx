@@ -28,8 +28,7 @@ export const More = ({
         ℹ️
       </span>
       &nbsp;
-      {children}
-      {isOpen && <span>{extraText}</span>}
+      {children} {isOpen && <span>{extraText}</span>}
     </div>
   )
 }

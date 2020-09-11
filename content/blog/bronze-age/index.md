@@ -3,6 +3,7 @@ title: Bronze Age
 date: "2020-10-02T23:46:37.121Z"
 ---
 
+<Box>
 In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t>.
 <T translate="Несмотря на">Despite</t> <T translate="извержение вулкана">volcanic eruption</t>, the island <T translate="сохранил">preserved</t> <T translate="фрески">fresco paintings</t> with the <T translate="изображениями">images</t> of blue monkeys.
 The <T translate="Уровень детализации">level of detail</t> <T translate="служил доказательством">served as evidence</t> that they were <T translate="изображены">painted</t> by people who had seen these <T translate="приматов">primates</t> <T translate="вживую">alive</t>.
@@ -13,7 +14,7 @@ The <T translate="Исследователи">researchers</t> <T translate="уч
 They also found out that some of the monkeys were <T translate="бабуинами">baboons</t>.
 The <T translate="Другие">other ones</t> were <T translate="лангурами">langurs</t> - primates native to the Indian <T translate="субконтинента">subcontinent</t>.
 These <T translate="открытия">findings</t> <T translate="означают">mean</t> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</t> the <T translate="расстояние">distance</T> between two countries is more than 4 <T translate="тысяч">thousand</t> kilometers.
-
+</Box>
 <hr/>
 In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"/>
 , the <CompleteText answer="island" placeholder="остров"/> of Santorini was a <CompleteText answer="major" placeholder="крупный"/> <CompleteText answer="trade center" placeholder="торговый центр"/> . <CompleteText answer="Despite" placeholder="Несмотря на"/>

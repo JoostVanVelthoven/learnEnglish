@@ -14,4 +14,6 @@ egg yolk will be less rich."?
 
 <Speech speak="What Are you going to do today?" />
 
-<More extraText="This is a extra text"><Speech speak="Anya, do you think this is a usefull feature?"  /> this is a text</More>
+<More extraText="This is a extra text"> this is a text</More>
+
+<Speech speak="Anya, do you think this is a usefull feature?"  />
