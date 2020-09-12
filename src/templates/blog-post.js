@@ -50,7 +50,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
           <footer>
             <SignUp />
-            <hr />
             <Bio />
           </footer>
         </article>

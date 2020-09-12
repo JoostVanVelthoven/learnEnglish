@@ -1,6 +1,16 @@
 import React, { useCallback } from "react"
 var sdk = require("microsoft-cognitiveservices-speech-sdk")
-export const Speech = ({ speak }: { speak: string }) => {
+export const Speech = ({
+  speak,
+  children,
+}: {
+  speak: string
+  children?: any
+}) => {
+  const text = children
+    ?.map(a => (typeof a === "string" ? a : a.props.children[0]))
+    ?.join(" ")
+
   const playSound = useCallback(
     _ => {
       const speechConfig = sdk.SpeechConfig.fromSubscription(
@@ -10,15 +20,11 @@ export const Speech = ({ speak }: { speak: string }) => {
       sdk.Recognizer.enableTelemetry(false)
       const audioConfig = sdk.AudioConfig.fromDefaultSpeakerOutput()
 
-      console.log(speechConfig)
       const synthesizer = new sdk.SpeechSynthesizer(speechConfig, audioConfig)
 
       synthesizer.speakTextAsync(
-        speak,
+        speak ?? text,
         result => {
-          if (result) {
-            console.log(JSON.stringify(result))
-          }
           synthesizer.close()
         },
         error => {
@@ -31,21 +37,35 @@ export const Speech = ({ speak }: { speak: string }) => {
   )
 
   return (
-    <span
-      onClick={playSound}
-      style={{
-        cursor: "pointer",
-        borderRadius: "50px",
-        backgroundColor: "lightCoral",
-        padding: "0.2rem",
-        width: "25px",
-        display: "inline-block",
-        textAlign: "center",
-        lineHeight: "initial",
-        userSelect: "none",
-      }}
-    >
-      🔉
-    </span>
+    <>
+      <span
+        onClick={playSound}
+        style={{
+          cursor: "pointer",
+          borderRadius: "50px",
+          backgroundColor: "lightCoral",
+          padding: "0.2rem",
+          width: "25px",
+          display: "inline-block",
+          textAlign: "center",
+          lineHeight: "initial",
+          userSelect: "none",
+        }}
+      >
+        🔉
+      </span>
+      {text && (
+        <span
+          onClick={playSound}
+          style={{
+            backgroundColor: "lightYellow",
+            padding: "0.6rem",
+            cursor: "pointer",
+          }}
+        >
+          {children}
+        </span>
+      )}
+    </>
   )
 }

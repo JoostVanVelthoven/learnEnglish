@@ -3,8 +3,9 @@ title: Bronze Age
 date: "2020-10-02T23:46:37.121Z"
 ---
 
-<Box>
-In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t>.
+<Tabs>
+<Box title="Reading with translation" isJustify={true}>
+<Speech>In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t></Speech>.
 <T translate="Несмотря на">Despite</t> <T translate="извержение вулкана">volcanic eruption</t>, the island <T translate="сохранил">preserved</t> <T translate="фрески">fresco paintings</t> with the <T translate="изображениями">images</t> of blue monkeys.
 The <T translate="Уровень детализации">level of detail</t> <T translate="служил доказательством">served as evidence</t> that they were <T translate="изображены">painted</t> by people who had seen these <T translate="приматов">primates</t> <T translate="вживую">alive</t>.
 <T translate="Согласно">According to</t> the <T translate="археологам">archaeologists</t>, the <T translate="обезьяны">apes</t> <T translate="принадлежали">belonged</t> to the African <T translate="виду">type</t>.
@@ -15,7 +16,7 @@ They also found out that some of the monkeys were <T translate="бабуинам
 The <T translate="Другие">other ones</t> were <T translate="лангурами">langurs</t> - primates native to the Indian <T translate="субконтинента">subcontinent</t>.
 These <T translate="открытия">findings</t> <T translate="означают">mean</t> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</t> the <T translate="расстояние">distance</T> between two countries is more than 4 <T translate="тысяч">thousand</t> kilometers.
 </Box>
-<hr/>
+<Box title="Exercise">
 In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"/>
 , the <CompleteText answer="island" placeholder="остров"/> of Santorini was a <CompleteText answer="major" placeholder="крупный"/> <CompleteText answer="trade center" placeholder="торговый центр"/> . <CompleteText answer="Despite" placeholder="Несмотря на"/>
 <CompleteText answer="volcanic eruption" placeholder="извержение вулкана"/> , the island <CompleteText answer="preserved" placeholder="сохранил"/>
@@ -46,3 +47,5 @@ In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"
 <CompleteText answer="baboons" placeholder="бабуинами"/> .
 <CompleteText answer="The other ones" placeholder="Другие"/> were
 <CompleteText answer="langurs" placeholder="лангурами"/> - primates native to the Indian subcontinent. These <CompleteText answer="findings" placeholder="открытия"/> <CompleteText answer="mean" placeholder="означают"/> that there were contacts between India and Greece in the Bronze Age <CompleteText answer="although" placeholder="хотя"/> the <CompleteText answer="distance" placeholder="расстояние"/> between two countries is more than 4 <CompleteText answer="thousand" placeholder="тысяч"/> kilometers.
+</Box>
+</Tabs>

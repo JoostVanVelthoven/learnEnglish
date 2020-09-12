@@ -38,6 +38,7 @@ export const ProgressBar = ({
             top: "0px",
             backgroundColor: "#fff",
             padding: "5px 0 5px 0",
+            zIndex: 500,
           }}
         >
           <div

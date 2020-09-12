@@ -18,6 +18,7 @@ export const T = ({
         style={{
           backgroundColor: "rgba(12, 242, 143, 0.2)",
           padding: "0.1rem",
+          cursor: "pointer",
         }}
         onClick={a => alert(translate)}
       >
