@@ -8,8 +8,6 @@ import { Tabs } from "./tabs"
 import { T } from "./text"
 const GameMarkdown = ({ raw }: { raw: string }) => (
   <Markdown
-    //@ts-ignore
-    style={{ lineHeight: "3.5rem" }}
     children={raw}
     options={{
       overrides: {

@@ -5,8 +5,7 @@ date: "2020-10-02T23:46:37.121Z"
 
 <Tabs>
 <Box title="Reading with translation" isJustify={true}>
-<Speech>In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t></Speech>.
-<T translate="Несмотря на">Despite</t> <T translate="извержение вулкана">volcanic eruption</t>, the island <T translate="сохранил">preserved</t> <T translate="фрески">fresco paintings</t> with the <T translate="изображениями">images</t> of blue monkeys.
+<Speech>In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t></Speech>. <T translate="Несмотря на">Despite</t> <T translate="извержение вулкана">volcanic eruption</t>, the island <T translate="сохранил">preserved</t> <T translate="фрески">fresco paintings</t> with the <T translate="изображениями">images</t> of blue monkeys.
 The <T translate="Уровень детализации">level of detail</t> <T translate="служил доказательством">served as evidence</t> that they were <T translate="изображены">painted</t> by people who had seen these <T translate="приматов">primates</t> <T translate="вживую">alive</t>.
 <T translate="Согласно">According to</t> the <T translate="археологам">archaeologists</t>, the <T translate="обезьяны">apes</t> <T translate="принадлежали">belonged</t> to the African <T translate="виду">type</t>.
 <T translate="Кроме того">Moreover</t>, they <T translate="обнаружили">found out</t> the evidence of trade relations between the <T translate="островитянами">islanders</t> and <T translate="Египтом">Egypt</t>.

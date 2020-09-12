@@ -60,7 +60,6 @@ function reducerMap(
 ) {
   switch (type) {
     case actions.initChallenge:
-      debugger
       if (state.items.find(a => a.id === id)) {
         return state
       }

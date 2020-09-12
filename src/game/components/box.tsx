@@ -7,5 +7,9 @@ export const Box = ({
   children: any
   isJustify: boolean
 }) => {
-  return <div className={isJustify ? "box" : ""}>{children}</div>
+  return (
+    <div className={isJustify ? "box" : ""} style={{ lineHeight: "3.5rem" }}>
+      {children}
+    </div>
+  )
 }
