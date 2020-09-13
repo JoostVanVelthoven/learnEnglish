@@ -4,14 +4,16 @@ import { Speech } from "./speech"
 export const T = ({
   translate,
   children,
+  inSpeech,
 }: {
   translate: string
   children: any
+  inSpeech: boolean
 }) => {
   const text = children?.filter(a => typeof a === "string")?.join(" ")
   return (
     <>
-      {text && <Speech speak={text} />}
+      {!inSpeech && text && <Speech speak={text} />}
       <span
         className="extraInfo"
         title={translate}
@@ -20,7 +22,10 @@ export const T = ({
           padding: "0.1rem",
           cursor: "pointer",
         }}
-        onClick={a => alert(translate)}
+        onClick={a => {
+          a.stopPropagation()
+          alert(translate)
+        }}
       >
         {children}
       </span>

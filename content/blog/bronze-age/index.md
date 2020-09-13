@@ -5,15 +5,16 @@ date: "2020-10-02T23:46:37.121Z"
 
 <Tabs>
 <Box title="Reading with translation" isJustify={true}>
-<Speech>In the <T translate="бронзовом веке">Bronze Age</t>, the <T translate="остров">island</t> of Santorini was a <T translate="крупным">major</t> <T translate="торговым центром">trade center</t></Speech>. <T translate="Несмотря на">Despite</t> <T translate="извержение вулкана">volcanic eruption</t>, the island <T translate="сохранил">preserved</t> <T translate="фрески">fresco paintings</t> with the <T translate="изображениями">images</t> of blue monkeys.
-The <T translate="Уровень детализации">level of detail</t> <T translate="служил доказательством">served as evidence</t> that they were <T translate="изображены">painted</t> by people who had seen these <T translate="приматов">primates</t> <T translate="вживую">alive</t>.
-<T translate="Согласно">According to</t> the <T translate="археологам">archaeologists</t>, the <T translate="обезьяны">apes</t> <T translate="принадлежали">belonged</t> to the African <T translate="виду">type</t>.
-<T translate="Кроме того">Moreover</t>, they <T translate="обнаружили">found out</t> the evidence of trade relations between the <T translate="островитянами">islanders</t> and <T translate="Египтом">Egypt</t>.
-<T translate="Позже">Later</t>, <T translate="приматологи">primatologists</t> <T translate="пришли к заключению">came to the conclusion</t> that some apes were <T translate="родом из">native to</t> India.
-The <T translate="Исследователи">researchers</t> <T translate="учитывали">considered</t> not only the color of the <T translate="меха">fur</t> but also <T translate="формы тела">body shapes</t> and<T translate="положения хвоста">tail positions</t> of the animals <T translate="анализируя"> by analyzing</t> the <T translate="изображения">paintings</t>.
-They also found out that some of the monkeys were <T translate="бабуинами">baboons</t>.
-The <T translate="Другие">other ones</t> were <T translate="лангурами">langurs</t> - primates native to the Indian <T translate="субконтинента">subcontinent</t>.
-These <T translate="открытия">findings</t> <T translate="означают">mean</t> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</t> the <T translate="расстояние">distance</T> between two countries is more than 4 <T translate="тысяч">thousand</t> kilometers.
+<Speech>In the <T translate="бронзовом веке">Bronze Age</T>, the <T translate="остров">island</T> of Santorini was a <T translate="крупным">major</T> <T translate="торговым центром">trade center</T>.</Speech> <T translate="Несмотря на">Despite</T> <T translate="извержение вулкана">volcanic eruption</T>, the island <T translate="сохранил">preserved</T> <T translate="фрески">fresco paintings</T> with the <T translate="изображениями">images</T> of blue monkeys.
+
+The <T translate="Уровень детализации">level of detail</T> <T translate="служил доказательством">served as evidence</T> that they were <T translate="изображены">painted</T> by people who had seen these <T translate="приматов">primates</T> <T translate="вживую">alive</T>.
+<T translate="Согласно">According to</T> the <T translate="археологам">archaeologists</T>, the <T translate="обезьяны">apes</T> <T translate="принадлежали">belonged</T> to the African <T translate="виду">type</T>.
+<T translate="Кроме того">Moreover</T>, they <T translate="обнаружили">found out</T> the evidence of trade relations between the <T translate="островитянами">islanders</T> and <T translate="Египтом">Egypt</T>.
+<T translate="Позже">Later</T>, <T translate="приматологи">primatologists</T> <T translate="пришли к заключению">came to the conclusion</T> that some apes were <T translate="родом из">native to</T> India.
+The <T translate="Исследователи">researchers</T> <T translate="учитывали">considered</T> not only the color of the <T translate="меха">fur</T> but also <T translate="формы тела">body shapes</T> and<T translate="положения хвоста">tail positions</T> of the animals <T translate="анализируя"> by analyzing</T> the <T translate="изображения">paintings</T>.
+They also found out that some of the monkeys were <T translate="бабуинами">baboons</T>.
+The <T translate="Другие">other ones</T> were <T translate="лангурами">langurs</T> - primates native to the Indian <T translate="субконтинента">subcontinent</T>.
+These <T translate="открытия">findings</T> <T translate="означают">mean</T> that there were contacts between India and Greece in the Bronze Age <T translate="хотя">although</T> the <T translate="расстояние">distance</T> between two countries is more than 4 <T translate="тысяч">thousand</T> kilometers.
 </Box>
 <Box title="Exercise">
 In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"/>

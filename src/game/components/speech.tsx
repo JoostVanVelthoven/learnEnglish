@@ -11,6 +11,13 @@ export const Speech = ({
     ?.map(a => (typeof a === "string" ? a : a.props.children[0]))
     ?.join(" ")
 
+  const childWithSpeechFlag = children?.map(a => {
+    if (typeof a === "object") {
+      return React.cloneElement(a, { inSpeech: true })
+    }
+    return a
+  })
+
   const playSound = useCallback(
     _ => {
       const speechConfig = sdk.SpeechConfig.fromSubscription(
@@ -63,7 +70,7 @@ export const Speech = ({
             cursor: "pointer",
           }}
         >
-          {children}
+          {childWithSpeechFlag}
         </span>
       )}
     </>
