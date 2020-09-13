@@ -55,6 +55,7 @@ export const CompleteText = ({
         width: `${Math.max(answer.length, placeholder.length) * 15}px`,
         lineHeight: "1rem",
         maxWidth: "100%",
+        outline: "none!important",
       }}
       aria-label={"перевести: " + placeholder}
       type="text"
