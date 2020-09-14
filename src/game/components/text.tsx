@@ -13,9 +13,10 @@ export const T = ({
   const text = children?.filter(a => typeof a === "string")?.join(" ")
   return (
     <>
+      {" "}
       {!inSpeech && text && <Speech speak={text} />}
       <span
-        className="extraInfo"
+        className="extraInfo hoverDarker"
         title={translate}
         style={{
           backgroundColor: "rgba(12, 242, 143, 0.2)",

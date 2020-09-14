@@ -3,11 +3,12 @@ import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import SignUp from "../components/signUp"
 import { AppProvider } from "../context/languageContext"
 import GameMarkdown from "../game/components/gameMarkdown"
 import { ProgressBar } from "../game/components/progressBar"
 import { rhythm, scale } from "../utils/typography"
-import SignUp from "./../components/signUp"
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -21,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-          <ProgressBar></ProgressBar>
+          <ProgressBar />
           <header>
             <h1
               style={{

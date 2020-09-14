@@ -2,3 +2,11 @@
   text-align: justify;
   hyphens: auto;
 }
+
+.hoverDarker:hover {
+  filter: brightness(70%);
+  transition: 0.5s;
+}
+:focus {
+  outline: none;
+}

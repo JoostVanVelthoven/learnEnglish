@@ -44,7 +44,7 @@ export const Speech = ({
   )
 
   return (
-    <>
+    <span className="hoverDarker">
       <span
         onClick={playSound}
         style={{
@@ -73,6 +73,6 @@ export const Speech = ({
           {childWithSpeechFlag}
         </span>
       )}
-    </>
+    </span>
   )
 }

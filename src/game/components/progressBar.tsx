@@ -2,13 +2,7 @@ import React, { useContext } from "react"
 import Confetti from "react-dom-confetti"
 import AppContext, { State } from "../../context/languageContext"
 
-export const ProgressBar = ({
-  answer,
-  placeholder,
-}: {
-  answer: string
-  placeholder: string
-}) => {
+export const ProgressBar = () => {
   const context = useContext<any>(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
   const percentage = Math.min(
