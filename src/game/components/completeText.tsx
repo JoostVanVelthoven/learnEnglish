@@ -3,7 +3,7 @@ import AppContext, { actions, State } from "../../context/languageContext"
 import useUniqueId from "../hooks/useUniqueId"
 
 const isValid = (input: string, answer: string) =>
-  input.length === 0 ? null : input?.toLowerCase() === answer?.toLowerCase()
+  input?.length === 0 ? null : input?.toLowerCase() === answer?.toLowerCase()
 
 export const CompleteText = ({
   answer,
@@ -52,7 +52,9 @@ export const CompleteText = ({
             ? "4px solid lightgreen"
             : "4px solid darkred",
         padding: "3px",
-        width: `${Math.max(answer.length, placeholder.length) * 15}px`,
+        width: `${
+          Math.max(answer?.length ?? 0, placeholder?.length ?? 0) * 15
+        }px`,
         lineHeight: "1rem",
         maxWidth: "100%",
         outline: "none!important",
