@@ -67,14 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
       .slice(index, posts.length)
       .filter(a => a.node.frontmatter.index === true)
 
-    const next = nextList.length > 0 ? nextList[0].node : undefined
-
-    console.log(post.node.fields.slug)
-
-    console.log(next)
-    console.log(previous)
-
-    console.log("!!!!!!")
+    const next = nextList.length > 1 ? nextList[1].node : undefined
 
     createPage({
       path: post.node.fields.slug,
