@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___level], order: ASC }
           limit: 1000
         ) {
           edges {
@@ -33,6 +33,8 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                level
+                index
               }
               internal {
                 content
@@ -52,8 +54,27 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const previousList = posts
+      .slice(0, index)
+      .filter(a => a.node.frontmatter.index === true)
+
+    const previous =
+      previousList.length > 0
+        ? previousList[previousList.length - 1].node
+        : undefined
+
+    const nextList = posts
+      .slice(index, posts.length)
+      .filter(a => a.node.frontmatter.index === true)
+
+    const next = nextList.length > 0 ? nextList[0].node : undefined
+
+    console.log(post.node.fields.slug)
+
+    console.log(next)
+    console.log(previous)
+
+    console.log("!!!!!!")
 
     createPage({
       path: post.node.fields.slug,

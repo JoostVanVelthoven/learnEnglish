@@ -1,6 +1,8 @@
 ---
 title: Bronze Age
 date: "2020-10-02T23:46:37.121Z"
+index: true
+level: 80
 ---
 
 <Tabs>
@@ -45,4 +47,5 @@ In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"
 <CompleteText answer="The other ones" placeholder="Другие"/> were
 <CompleteText answer="langurs" placeholder="лангурами"/> - primates native to the Indian subcontinent. These <CompleteText answer="findings" placeholder="открытия"/> <CompleteText answer="mean" placeholder="означают"/> that there were contacts between India and Greece in the Bronze Age <CompleteText answer="although" placeholder="хотя"/> the <CompleteText answer="distance" placeholder="расстояние"/> between two countries is more than 4 <CompleteText answer="thousand" placeholder="тысяч"/> kilometers.
 </Box>
+<Box title="Extra">..</Box>
 </Tabs>

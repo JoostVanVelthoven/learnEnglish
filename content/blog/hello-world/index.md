@@ -3,6 +3,7 @@ title: Hello World Joost
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 coverPhoto: "bg.jpg"
+index: false
 ---
 
 Here's an e
