@@ -7,8 +7,4 @@ describe("CompleteText", () => {
     const tree = renderer.create(<CompleteText />).toTree()
     expect(tree.rendered.type).toBe("input")
   })
-
-  it("broke", () => {
-    expect(true).toBe(false)
-  })
 })
