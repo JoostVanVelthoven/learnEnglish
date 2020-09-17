@@ -9,8 +9,8 @@ export const CompleteText = ({
   answer,
   placeholder,
 }: {
-  answer: string
-  placeholder: string
+  answer?: string
+  placeholder?: string
 }) => {
   const context = useContext<any>(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
