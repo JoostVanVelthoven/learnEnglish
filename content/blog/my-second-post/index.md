@@ -18,3 +18,5 @@ egg yolk will be less rich."?
 <More extraText="This is a extra text"> this is a text</More>
 
 <Speech speak="Anya, do you think this is a usefull feature?"  />
+
+<Dropdown options="hello|goodby|good day" answer="goodby" />

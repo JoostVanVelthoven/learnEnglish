@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx"
 import React from "react"
 import { Box } from "./box"
 import { CompleteText } from "./completeText"
+import { Dropdown } from "./dropdown"
 import { More } from "./more"
 import { Speech } from "./speech"
 import { Tabs } from "./tabs"
@@ -17,6 +18,7 @@ const GameMarkdown = ({ raw }: { raw: string }) => (
         More,
         Box,
         Tabs,
+        Dropdown,
       },
     }}
   />

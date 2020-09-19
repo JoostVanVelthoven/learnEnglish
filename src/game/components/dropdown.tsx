@@ -5,17 +5,18 @@ import useUniqueId from "../hooks/useUniqueId"
 const isValid = (input: string, answer: string) =>
   input?.length === 0 ? null : input?.toLowerCase() === answer?.toLowerCase()
 
-export const CompleteText = ({
+export const Dropdown = ({
   answer,
-  placeholder,
+  options,
 }: {
   answer?: string
-  placeholder?: string
+  options?: string
 }) => {
+  const optionsList = (options ?? "").split("|")
   const context = useContext<any>(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
 
-  const id = useUniqueId("Challenge")
+  const id = useUniqueId("Dropdown")
 
   const [input, setInput] = useState<string>("")
   useEffect(() => {
@@ -60,7 +61,7 @@ export const CompleteText = ({
   )
 
   return (
-    <input
+    <select
       style={{
         borderRadius: "3px",
         border:
@@ -70,19 +71,19 @@ export const CompleteText = ({
             ? "4px solid lightgreen"
             : "4px solid darkred",
         padding: "3px",
-        width: `${
-          Math.max(answer?.length ?? 0, placeholder?.length ?? 0) * 15
-        }px`,
+
         lineHeight: "1rem",
         maxWidth: "100%",
         outline: "none!important",
       }}
-      aria-label={"перевести: " + placeholder}
-      type="text"
-      placeholder={placeholder}
+      aria-label={"перевести: "}
       onBlur={onUpdateBlur}
       onChange={onUpdateChange}
-    />
+    >
+      {optionsList.map((i, index) => (
+        <option key={index}>{i}</option>
+      ))}
+    </select>
   )
 }
 
@@ -92,15 +93,16 @@ function update(
   e: any,
   answer: string,
   setInput: React.Dispatch<React.SetStateAction<string>>,
-  onlyWhenValid: boolean,
+  isOnBlur: boolean,
   setValidResult: React.Dispatch<React.SetStateAction<boolean>>,
   validResult: boolean
 ) {
+  debugger
   setInput(e.target.value.trim())
 
   const valid = isValid(e.target.value.trim(), answer)
 
-  if (!onlyWhenValid || valid || validResult) {
+  if (!isOnBlur || valid || validResult) {
     dispatch({
       type: actions.setChallengeResult,
       id,
