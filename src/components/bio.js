@@ -58,7 +58,7 @@ const Bio = () => {
       <p>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
-        <a href="https://www.instagram.com/anyasecret/">
+        <a href="https://www.instagram.com/english_online_by_miss_ann/">
           You can follow her on Instagram
         </a>
       </p>
