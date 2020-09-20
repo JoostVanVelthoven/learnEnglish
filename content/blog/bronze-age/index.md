@@ -5,6 +5,7 @@ index: true
 level: 80
 ---
 
+<img src="/images/monkey.jpg" style="border-radius:1rem">
 <Tabs>
 <Box title="Reading with translation" isJustify={true}>
 <Speech>In the <T translate="бронзовом веке">Bronze Age</T>, the <T translate="остров">island</T> of Santorini was a <T translate="крупным">major</T> <T translate="торговым центром">trade center</T>.</Speech><br/>
@@ -47,5 +48,7 @@ In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"
 <CompleteText answer="The other ones" placeholder="Другие"/> were
 <CompleteText answer="langurs" placeholder="лангурами"/> - primates native to the Indian subcontinent. These <CompleteText answer="findings" placeholder="открытия"/> <CompleteText answer="mean" placeholder="означают"/> that there were contacts between India and Greece in the Bronze Age <CompleteText answer="although" placeholder="хотя"/> the <CompleteText answer="distance" placeholder="расстояние"/> between two countries is more than 4 <CompleteText answer="thousand" placeholder="тысяч"/> kilometers.
 </Box>
-<Box title="Extra">..</Box>
+<Box title="Listening">
+<Speech speak="In the Bronze Age, the island of Santorini was a major trade center." /><CompleteText answer="In the Bronze Age"  />, <CompleteText answer="the island of Santorini was a major trade center"  />.
+</Box>
 </Tabs>
