@@ -25,7 +25,7 @@ export const CompleteText = ({
   const { state, dispatch }: { state: State; dispatch: any } = context
   const id = useUniqueId("Challenge")
 
-  const item = state.items.find(a => a.id === id)
+  const item = state?.items.find(a => a.id === id)
   const isCurrent = item?.isCurrent ?? false
   const [input, setInput] = useState<string>(startsWith ?? "")
   useEffect(() => {
