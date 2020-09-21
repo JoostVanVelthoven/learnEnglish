@@ -10,6 +10,7 @@ export interface State {
 export interface Challenge {
   id: string
   isValid: boolean
+  isCurrent: boolean
 }
 
 const initialState: State = {
@@ -63,6 +64,7 @@ function reducerMap(
       if (state.items.find(a => a.id === id)) {
         return state
       }
+
       return {
         ...state,
         numberOfChallenges: state.numberOfChallenges + 1,
@@ -71,12 +73,19 @@ function reducerMap(
     case actions.setChallengeResult:
       const items = [...state.items]
       const item = items.find(a => a.id === id)
+      const index = items.indexOf(item) + 1
+      const nextItem = index !== items.length ? items[index] : undefined
+
+      const oldState = item.isValid
 
       item.isValid = isValid ?? false
+      if (item.isValid && nextItem) {
+        item.isCurrent = false
+        nextItem.isCurrent = true
+      }
 
       return {
         ...state,
-        numberOfChallenges: state.numberOfChallenges + 1,
         items: items,
       }
   }

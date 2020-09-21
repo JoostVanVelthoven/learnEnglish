@@ -29,6 +29,7 @@ export const Tabs = ({ children }: { children: any }) => {
 
   const content = tabs.map((a, index) => (
     <div
+      key={index}
       style={{
         paddingTop: "1rem",
         display: activeTab === index ? "block" : "none",

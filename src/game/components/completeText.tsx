@@ -1,4 +1,10 @@
-import React, { useCallback, useContext, useEffect, useState } from "react"
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import AppContext, { actions, State } from "../../context/languageContext"
 import useUniqueId from "../hooks/useUniqueId"
 
@@ -8,16 +14,20 @@ const isValid = (input: string, answer: string) =>
 export const CompleteText = ({
   answer,
   placeholder,
+  startsWith,
 }: {
   answer?: string
   placeholder?: string
+
+  startsWith?: string
 }) => {
   const context = useContext<any>(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
-
   const id = useUniqueId("Challenge")
 
-  const [input, setInput] = useState<string>("")
+  const item = state.items.find(a => a.id === id)
+  const isCurrent = item?.isCurrent ?? false
+  const [input, setInput] = useState<string>(startsWith ?? "")
   useEffect(() => {
     dispatch({
       type: actions.initChallenge,
@@ -25,6 +35,14 @@ export const CompleteText = ({
       id,
     })
   }, [])
+
+  const ref = useRef(undefined)
+
+  useEffect(() => {
+    if (isCurrent) {
+      ref.current.focus()
+    }
+  }, [isCurrent])
 
   const [validResult, setValidResult] = useState<boolean | undefined>(undefined)
   const onUpdateChange = useCallback(
@@ -82,6 +100,8 @@ export const CompleteText = ({
       placeholder={placeholder}
       onBlur={onUpdateBlur}
       onChange={onUpdateChange}
+      value={input}
+      ref={ref}
     />
   )
 }
@@ -96,7 +116,7 @@ function update(
   setValidResult: React.Dispatch<React.SetStateAction<boolean>>,
   validResult: boolean
 ) {
-  setInput(e.target.value.trim())
+  setInput(e.target.value)
 
   const valid = isValid(e.target.value.trim(), answer)
 
