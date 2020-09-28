@@ -4,7 +4,7 @@ date: "2020-10-03T23:46:37.121Z"
 index: true
 level: 90
 ---
-<img src="/images/bunney.jpg" style="border-radius:1rem">
+<img src="/images/bunny.jpg" style="border-radius:1rem">
 
 <Tabs>
 <Box title="reading"  isJustify={true}>
