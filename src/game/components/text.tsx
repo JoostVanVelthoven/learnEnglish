@@ -19,7 +19,7 @@ export const T = ({
         className="extraInfo hoverDarker"
         title={translate}
         style={{
-          backgroundColor: "lightgreen",
+          backgroundColor: "#6A9955",
           padding: "0.1rem",
           cursor: "pointer",
         }}
