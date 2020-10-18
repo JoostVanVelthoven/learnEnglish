@@ -59,7 +59,7 @@ export const Speech = ({
           userSelect: "none",
         }}
       >
-        😀
+        🔉
       </span>
       {text && (
         <span
