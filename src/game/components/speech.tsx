@@ -51,8 +51,8 @@ export const Speech = ({
           cursor: "pointer",
           borderRadius: "50px",
           backgroundColor: "lightCoral",
-          padding: "0.2rem",
-          width: "25px",
+
+          width: "30px",
           display: "inline-block",
           textAlign: "center",
           lineHeight: "initial",
