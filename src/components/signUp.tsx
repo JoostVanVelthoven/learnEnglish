@@ -64,7 +64,7 @@ const SignUp = () => {
   return (
     <div
       style={{
-        backgroundColor: "antiquewhite",
+        backgroundColor: "#FFDA9E",
         borderRadius: "1rem",
         padding: "1rem",
         textAlign: "center",
