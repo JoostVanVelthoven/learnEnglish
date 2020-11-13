@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import "./box.css"
 export const Tabs = ({ children }: { children: any }) => {
-  const tabs = children.filter(a => typeof a === "object")
+  const tabs = children.filter((a: any) => typeof a === "object")
 
   const [activeTab, setActiveTab] = useState(0)
-  const menu = tabs.map((a, index) => (
+  const menu = tabs.map((a: any, index: number) => (
     <span
       onClick={a => setActiveTab(index)}
       style={{
@@ -27,7 +27,7 @@ export const Tabs = ({ children }: { children: any }) => {
     </span>
   ))
 
-  const content = tabs.map((a, index) => (
+  const content = tabs.map((a: any, index: number) => (
     <div
       key={index}
       style={{

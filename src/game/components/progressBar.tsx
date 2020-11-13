@@ -5,6 +5,10 @@ import AppContext, { State } from "../../context/languageContext"
 export const ProgressBar = () => {
   const context = useContext<any>(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
+
+  if (!(state.numberOfChallenges > 0)) {
+    return <></>
+  }
   const percentage = Math.min(
     (state.items.filter(a => a.isValid).length / state.items.length) * 100,
     100
@@ -24,50 +28,48 @@ export const ProgressBar = () => {
     colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
   }
   return (
-    state.numberOfChallenges > 0 && (
-      <>
+    <>
+      <div
+        style={{
+          position: "sticky",
+          top: "0px",
+          backgroundColor: "#fff",
+          padding: "5px 0 5px 0",
+          zIndex: 500,
+        }}
+      >
         <div
           style={{
-            position: "sticky",
-            top: "0px",
-            backgroundColor: "#fff",
-            padding: "5px 0 5px 0",
-            zIndex: 500,
+            backgroundColor: "#E5E5E5",
+            borderRadius: "5px",
+            padding: "5px",
           }}
         >
           <div
             style={{
-              backgroundColor: "#E5E5E5",
-              borderRadius: "5px",
-              padding: "5px",
+              backgroundColor: "#4099D5",
+              width: percentage + "%",
+              lineHeight: "0.0",
+              height: "5px",
+              transition: "all 0.3s ease 0s",
             }}
           >
-            <div
-              style={{
-                backgroundColor: "#4099D5",
-                width: percentage + "%",
-                lineHeight: "0.0",
-                height: "5px",
-                transition: "all 0.3s ease 0s",
-              }}
-            >
-              &nbsp;
-            </div>
+            &nbsp;
           </div>
         </div>
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "none",
-          }}
-        >
-          <Confetti active={completed} config={config} />
-        </div>
-      </>
-    )
+      </div>
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "none",
+        }}
+      >
+        <Confetti active={completed} config={config} />
+      </div>
+    </>
   )
 }

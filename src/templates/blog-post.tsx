@@ -9,7 +9,7 @@ import GameMarkdown from "../game/components/gameMarkdown"
 import { ProgressBar } from "../game/components/progressBar"
 import { rhythm, scale } from "../utils/typography"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, pageContext, location }: any) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next, raw } = pageContext
@@ -42,7 +42,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               {post.frontmatter.date}
             </p>
           </header>
-
           <GameMarkdown raw={raw} />
           <hr
             style={{

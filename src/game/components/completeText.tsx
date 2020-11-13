@@ -36,22 +36,24 @@ export const CompleteText = ({
     })
   }, [])
 
-  const ref = useRef(undefined)
+  const ref = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (isCurrent) {
-      ref.current.focus()
+      ref?.current?.focus()
     }
   }, [isCurrent])
 
-  const [validResult, setValidResult] = useState<boolean | undefined>(undefined)
+  const [validResult, setValidResult] = useState<boolean | undefined | null>(
+    undefined
+  )
   const onUpdateChange = useCallback(
     e => {
       update(
         dispatch,
         id,
         e,
-        answer,
+        answer ?? "",
         setInput,
         true,
         setValidResult,
@@ -67,7 +69,7 @@ export const CompleteText = ({
         dispatch,
         id,
         e,
-        answer,
+        answer ?? "",
         setInput,
         false,
         setValidResult,
@@ -113,8 +115,10 @@ function update(
   answer: string,
   setInput: React.Dispatch<React.SetStateAction<string>>,
   onlyWhenValid: boolean,
-  setValidResult: React.Dispatch<React.SetStateAction<boolean>>,
-  validResult: boolean
+  setValidResult: React.Dispatch<
+    React.SetStateAction<boolean | undefined | null>
+  >,
+  validResult: boolean | undefined | null
 ) {
   setInput(e.target.value)
 

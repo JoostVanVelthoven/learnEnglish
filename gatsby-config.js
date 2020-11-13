@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: [
     //`gatsby-plugin-feed`,
+    //`gatsby-plugin-ts`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -8,10 +8,10 @@ export const Speech = ({
   children?: any
 }) => {
   const text = children
-    ?.map(a => (typeof a === "string" ? a : a.props.children[0]))
+    ?.map((a: any) => (typeof a === "string" ? a : a.props.children[0]))
     ?.join(" ")
 
-  const childWithSpeechFlag = children?.map(a => {
+  const childWithSpeechFlag = children?.map((a: any) => {
     if (typeof a === "object") {
       return React.cloneElement(a, { inSpeech: true })
     }
@@ -31,10 +31,10 @@ export const Speech = ({
 
       synthesizer.speakTextAsync(
         speak ?? text,
-        result => {
+        () => {
           synthesizer.close()
         },
-        error => {
+        () => {
           alert("браузер не поддерживает функцию браузера")
           synthesizer.close()
         }

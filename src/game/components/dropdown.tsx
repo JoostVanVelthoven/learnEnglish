@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useEffect, useState } from "react"
 import AppContext, { actions, State } from "../../context/languageContext"
 import useUniqueId from "../hooks/useUniqueId"
 
-const isValid = (input: string, answer: string) =>
+const isValid = (input: string | undefined, answer: string | undefined) =>
   input?.length === 0 ? null : input?.toLowerCase() === answer?.toLowerCase()
 
 export const Dropdown = ({
@@ -91,11 +91,11 @@ function update(
   dispatch: any,
   id: string,
   e: any,
-  answer: string,
+  answer: string | undefined,
   setInput: React.Dispatch<React.SetStateAction<string>>,
   isOnBlur: boolean,
-  setValidResult: React.Dispatch<React.SetStateAction<boolean>>,
-  validResult: boolean
+  setValidResult: React.Dispatch<React.SetStateAction<boolean | undefined>>,
+  validResult: boolean | undefined
 ) {
   debugger
   setInput(e.target.value.trim())
@@ -108,6 +108,6 @@ function update(
       id,
       isValid: valid,
     })
-    setValidResult(valid)
+    setValidResult(valid ?? undefined)
   }
 }
