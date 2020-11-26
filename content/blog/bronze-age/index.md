@@ -48,6 +48,4 @@ In the <CompleteText answer="Bronze Age" placeholder="бронзовый век"
 <CompleteText answer="The other ones" placeholder="Другие"/> were
 <CompleteText answer="langurs" placeholder="лангурами"/> - primates native to the Indian subcontinent. These <CompleteText answer="findings" placeholder="открытия"/> <CompleteText answer="mean" placeholder="означают"/> that there were contacts between India and Greece in the Bronze Age <CompleteText answer="although" placeholder="хотя"/> the <CompleteText answer="distance" placeholder="расстояние"/> between two countries is more than 4 <CompleteText answer="thousand" placeholder="тысяч"/> kilometers.
 </Box>
-<Box title="Listening">
-<Speech speak="In the Bronze Age, the island of Santorini was a major trade center." />: <CompleteText answer="In" /> <CompleteText answer="the" />Bronze Age, the <CompleteText answer="island" /> of Santorini was a <CompleteText answer="major trade center" startsWith="m" /> .</Box>
 </Tabs>
