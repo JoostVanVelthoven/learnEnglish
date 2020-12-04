@@ -12,7 +12,10 @@ export const More = ({
   return (
     <div>
       <span
-        onClick={_ => setIsOpen(!isOpen)}
+        onClick={e => {
+          e.stopPropagation()
+          setIsOpen(!isOpen)
+        }}
         style={{
           cursor: "pointer",
           borderRadius: "50px",

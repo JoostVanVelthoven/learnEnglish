@@ -26,7 +26,7 @@ const reducer = (
     type,
     id,
     isValid,
-  }: { type: actions; string; id?: string; isValid: boolean }
+  }: { type: actions; id?: string; isValid: boolean }
 ) => {
   const newState = reducerMap(type, state, id, isValid)
   return newState
