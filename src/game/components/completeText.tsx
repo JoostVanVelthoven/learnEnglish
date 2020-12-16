@@ -122,7 +122,7 @@ function update(
 ) {
   setInput(e.target.value)
 
-  const valid = isValid(e.target.value.trim(), answer)
+  const valid = isValid(e.target.value.trim(), answer?.trim())
 
   if (!onlyWhenValid || valid || validResult) {
     dispatch({
