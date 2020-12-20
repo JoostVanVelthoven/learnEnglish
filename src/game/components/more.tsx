@@ -10,7 +10,7 @@ export const More = ({
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div>
+    <span>
       <span
         onClick={e => {
           e.stopPropagation()
@@ -19,7 +19,7 @@ export const More = ({
         style={{
           cursor: "pointer",
           borderRadius: "50px",
-          backgroundColor: "yellowgreen",
+          backgroundColor: "#B6FF00",
           width: "30px",
           display: "inline-block",
           textAlign: "center",
@@ -27,10 +27,13 @@ export const More = ({
           userSelect: "none",
         }}
       >
-        ℹ️
+        I
       </span>
       &nbsp;
-      {children} {isOpen && <span>{extraText}</span>}
-    </div>
+      {children}{" "}
+      {isOpen && (
+        <span style={{ backgroundColor: "#B6FF00" }}>{extraText}</span>
+      )}
+    </span>
   )
 }
