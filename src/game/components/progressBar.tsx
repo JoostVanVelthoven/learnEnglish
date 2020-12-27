@@ -19,8 +19,10 @@ export const ProgressBar = () => {
     const hasGa = typeof ga
     console.log({ hasGa })
     if (thresholdValue && hasGa !== "undefined") {
-      ga("send", "event", "exercise", `${thresholdValue} completed`)
-      setPreviouslyPercentage(percentage)
+      if (percentage > previouslyPercentage) {
+        ga("send", "event", "exercise", `${thresholdValue} completed`)
+        setPreviouslyPercentage(percentage)
+      }
     }
   }, [percentage])
 
