@@ -1,18 +1,35 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Confetti from "react-dom-confetti"
 import AppContext, { State } from "../../context/languageContext"
 
 export const ProgressBar = () => {
   const context = useContext<any>(AppContext)
-  const { state, dispatch }: { state: State; dispatch: any } = context
+  const { state }: { state: State; dispatch: any } = context
 
-  if (!(state.numberOfChallenges > 0)) {
-    return <></>
-  }
+  const [previouslyPercentage, setPreviouslyPercentage] = useState(0)
   const percentage = Math.min(
     (state.items.filter(a => a.isValid).length / state.items.length) * 100,
     100
   )
+  useEffect(() => {
+    const thresholds = [1, 50, 75, 100]
+    const thresholdValue = thresholds.find(
+      threshold => previouslyPercentage < threshold && threshold >= percentage
+    )
+    const hasGa = typeof ga
+    console.log({ hasGa })
+    if (thresholdValue && hasGa !== "undefined") {
+      if (percentage > previouslyPercentage) {
+        ga("send", "event", "exercise", `${thresholdValue} completed`)
+        setPreviouslyPercentage(percentage)
+      }
+    }
+  }, [percentage])
+
+  if (!(state.numberOfChallenges > 0)) {
+    return <></>
+  }
+
   const completed = percentage === 100
   const config = {
     angle: 90,
