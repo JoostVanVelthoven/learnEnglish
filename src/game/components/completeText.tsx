@@ -21,7 +21,7 @@ export const CompleteText = ({
 
   startsWith?: string
 }) => {
-  const context = useContext<any>(AppContext)
+  const context = useContext(AppContext)
   const { state, dispatch }: { state: State; dispatch: any } = context
   const id = useUniqueId("Challenge")
 
