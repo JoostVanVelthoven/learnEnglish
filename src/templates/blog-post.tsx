@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby"
+import { graphql, Link, navigate } from "gatsby"
 import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -43,6 +43,17 @@ const BlogPostTemplate = ({ data, pageContext, location }: any) => {
             </p>
           </header>
           <GameMarkdown raw={raw} />
+
+          <a
+            style={{ color: "#fff" }}
+            onClick={() => {
+              localStorage.setItem("editor", raw)
+              navigate("/editor")
+            }}
+          >
+            edit
+          </a>
+
           <hr
             style={{
               marginBottom: rhythm(1),
