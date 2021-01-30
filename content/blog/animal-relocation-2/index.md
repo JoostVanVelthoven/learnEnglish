@@ -8,14 +8,15 @@ level: 90
 <Tabs>
 <Box title="reading"  isJustify={true}>
 
-Several kinds of <T translate="кенгуру">kangaroos</t> became extinct where rabbits were <T translate="обнаружены">found</t>.
+Several kinds of <T translate="кенгуру">kangaroos</t><More extraText="became extinct - вымерло; to become extinct -вымирать -  устойчивое выражение "> became extinct</More> where rabbits
+<More extraText="were found - были обнаружены; пассивный залог. Подлежащее в предложении делает действие не само, а испытывает действие на себе. Кто выполняет действие не всегда важно. Важен результат. Кролики не обнаружили сами себя. Их кто-то обнаружил."> were <T translate="обнаружены">found</t></More>.
 Kangaroos had <T translate="просто">simply</t> a <T translate="недостаток">shortage</t> of food.
-Other little <T translate="сумчатые">marsupials</t> were <T translate="серьезно">severely</t> <T translate="пострадали">affected</t>.
-Rabbits were eating out <T translate="растения">plants</t> and were <T translate="обгладывали">browsing</t> young trees <T translate="уничтожая">removing</t> them <T translate="полностью">totally</t>.
-In 1875 the <T translate="штат">State</t> of South Australia <T translate="принял">adopted</t> the <T translate="акт">act</t> <T translate="обязывающий">binding</t> the <T translate="фермеров">farmers</t> to <T translate="убивать">kill</t> rabbits and <T translate="предоставлять">provide</t> the State <T translate="властям">authorities</t> with rabbit <T translate="шкурки">skins</t> as the <T translate="доказательство">evidence</t>.
+Other little <T translate="сумчатые">marsupials</t><More extraText="см. were found выше "> were <T translate="серьезно">severely</t> <T translate="пострадали">affected</t></More>.
+Rabbits were eating out <T translate="растения">plants</t> and were <T translate="обгладывали">browsing</t> young trees <T translate="уничтожая"><More extraText="уничтожая - Present Participle, причастие. Соответствует русскому причастию настоящего времени"> removing</t> them <T translate="полностью">totally</t>.
+In 1875 the <T translate="штат">State</t> of South Australia <T translate="принял">adopted</t> the <T translate="акт">act</t> <T translate="обязывающий"><More extraText="см. removing выше"> binding</t> the <T translate="фермеров">farmers</t> to <T translate="убивать">kill</t> rabbits and <T translate="предоставлять"><More extraText="to provide with -Предлог!!!"> provide</t> the State <T translate="властям">authorities</t> with rabbit <T translate="шкурки">skins</t> as the <T translate="доказательство">evidence</t>.
 <T translate="Те">Those</t> who <T translate="сдавал">delivered</t> <T translate="меньше">less</t> skins had to pay a <T translate="штраф">fine</t>.
-Lots of farmers made a <T translate="состояние">fortune</t> with rabbits.
-This <T translate="индустрия">industrial field</t> provided Australians with more <T translate="рабочих">job</t> <T translate="возможностей">opportunities</t> than <T translate="любая другая">any other</t> did.
+Lots of farmers<More extraText="to make a fortune - нажить состояние, разбогатеть; устойчивое выражение"> made a <T translate="состояние">fortune</t></More> with rabbits.
+This <T translate="индустрия">industrial field</t> provided Australians with more <T translate="рабочих">job</t> <T translate="возможностей">opportunities</t> than <T translate="любая другая">any other</t> field.
 But the <T translate="количество">amount</t> of rabbits didn’t <T translate="становилось меньше">grow less</t>.
 <T translate="Первоначально">Initially</t> it was decided to bring <T translate="естественных">natural</t> <T translate="врагов">enemies</t> of rabbits - <T translate="лис">foxes</t>, <T translate="хорьков">ferrets</t> and <T translate="горностаев">weasels</t>.
 But the <T translate="попытка">attempt</t> <T translate="провалилась">failed</t>.

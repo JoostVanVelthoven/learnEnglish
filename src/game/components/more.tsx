@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-var sdk = require("microsoft-cognitiveservices-speech-sdk")
 export const More = ({
   children,
   extraText,
@@ -10,7 +9,7 @@ export const More = ({
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <span>
+    <span style={{ border: "1px solid #B6FF00", borderRadius: "2px" }}>
       <span
         onClick={e => {
           e.stopPropagation()
