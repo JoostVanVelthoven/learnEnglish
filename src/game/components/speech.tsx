@@ -21,7 +21,7 @@ export const Speech = ({
   const playSound = useCallback(
     _ => {
       const speechConfig = sdk.SpeechConfig.fromSubscription(
-        "d5bf02f585f34c82826195a57bc5a75e",
+        process.env.SpeechKey,
         "northeurope"
       )
       sdk.Recognizer.enableTelemetry(false)
